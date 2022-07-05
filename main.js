@@ -22,15 +22,15 @@ const alphaText = document.querySelector('#alpha')
 const betaText = document.querySelector('#beta')
 const gammaText = document.querySelector('#gamma')
 
-camera.position.z = 100
+//camera.position.z = 100
 
 window.addEventListener('deviceorientation', function(event) {
   alpha = event.alpha;
   beta = event.beta;
-  gamma = event.gamma;
+  //gamma = event.gamma;
   alphaText.innerHTML = Math.round(alpha)
   betaText.innerHTML = Math.round(beta)
-  gammaText.innerHTML = Math.round(gamma)
+  //gammaText.innerHTML = Math.round(gamma)
 });
 
 const DegToRad = Math.PI/180
@@ -38,8 +38,8 @@ const DegToRad = Math.PI/180
 function animate() {
   requestAnimationFrame( animate );
 
-  sphere.rotation.x = beta * DegToRad;
-  sphere.rotation.y = alpha * DegToRad;
+  camera.rotation.x = beta * DegToRad;
+  camera.rotation.y = alpha * DegToRad;
   //sphere.rotation.z = gamma * DegToRad;
 
   renderer.render( scene, camera );
