@@ -38,8 +38,8 @@ const DegToRad = Math.PI/180
 function animate() {
   requestAnimationFrame( animate );
 
-  camera.rotation.x = beta * DegToRad;
-  camera.rotation.y = alpha * DegToRad;
+  sphere.rotation.x = beta * DegToRad / 2;
+  sphere.rotation.y = alpha * DegToRad / 2;
   //sphere.rotation.z = gamma * DegToRad;
 
   renderer.render( scene, camera );
