@@ -22,6 +22,8 @@ const alphaText = document.querySelector('#alpha')
 const betaText = document.querySelector('#beta')
 const gammaText = document.querySelector('#gamma')
 
+camera.position.z = 100
+
 window.addEventListener('deviceorientation', function(event) {
   alpha = event.alpha;
   beta = event.beta;
@@ -36,9 +38,9 @@ const DegToRad = Math.PI/180
 function animate() {
   requestAnimationFrame( animate );
 
-  camera.rotation.x = beta * DegToRad;
-  camera.rotation.y = alpha * DegToRad;
-  camera.rotation.z = gamma * DegToRad;
+  sphere.rotation.x = beta * DegToRad;
+  sphere.rotation.y = alpha * DegToRad;
+  sphere.rotation.z = gamma * DegToRad;
 
   renderer.render( scene, camera );
 }
