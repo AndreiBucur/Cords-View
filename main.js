@@ -40,7 +40,7 @@ function animate() {
 
   sphere.rotation.x = beta * DegToRad;
   sphere.rotation.y = alpha * DegToRad;
-  sphere.rotation.z = gamma * DegToRad;
+  //sphere.rotation.z = gamma * DegToRad;
 
   renderer.render( scene, camera );
 }
