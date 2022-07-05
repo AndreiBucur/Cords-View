@@ -17,6 +17,8 @@ const material = new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe: true
 const sphere = new THREE.Mesh( geometry, material );
 scene.add( sphere );
 
+
+
 let alpha, beta, gamma;
 
 window.addEventListener('deviceorientation', function(event) {
