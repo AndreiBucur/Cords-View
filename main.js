@@ -17,14 +17,18 @@ const material = new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe: true
 const sphere = new THREE.Mesh( geometry, material );
 scene.add( sphere );
 
-
-
 let alpha, beta, gamma;
+const alphaText = document.querySelector('#alpha')
+const betaText = document.querySelector('#beta')
+const gammaText = document.querySelector('#gamma')
 
 window.addEventListener('deviceorientation', function(event) {
   alpha = event.alpha;
   beta = event.beta;
   gamma = event.gamma;
+  alphaText.innerHTML = Math.round(alpha)
+  betaText.innerHTML = Math.round(beta)
+  gammaText.innerHTML = Math.round(gamma)
 });
 
 const DegToRad = Math.PI/180
